@@ -1,0 +1,800 @@
+{
+  "address": "CprucEGtqY3ntLcT31ag1RmhRQZ1AU4jMf4DMuYcimdH",
+  "metadata": {
+    "name": "multi_buy",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "multi_buy",
+      "discriminator": [
+        70,
+        183,
+        248,
+        137,
+        188,
+        17,
+        105,
+        101
+      ],
+      "accounts": [
+        {
+          "name": "cp_swap_program",
+          "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C"
+        },
+        {
+          "name": "payer",
+          "signer": true
+        },
+        {
+          "name": "fee_wallet1",
+          "writable": true
+        },
+        {
+          "name": "fee_wallet2",
+          "writable": true
+        },
+        {
+          "name": "fee_wallet3",
+          "writable": true
+        },
+        {
+          "name": "authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116,
+                  95,
+                  97,
+                  110,
+                  100,
+                  95,
+                  108,
+                  112,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  95,
+                  115,
+                  101,
+                  101,
+                  100
+                ]
+              }
+            ],
+            "program": {
+              "kind": "account",
+              "path": "cp_swap_program"
+            }
+          }
+        },
+        {
+          "name": "amm_config"
+        },
+        {
+          "name": "wsol_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "wsol_mint"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "pool_state_1",
+          "writable": true
+        },
+        {
+          "name": "pool_state_2",
+          "writable": true
+        },
+        {
+          "name": "pool_state_3",
+          "writable": true
+        },
+        {
+          "name": "pool_state_4",
+          "writable": true
+        },
+        {
+          "name": "pool_state_5",
+          "writable": true
+        },
+        {
+          "name": "pool_state_6",
+          "writable": true
+        },
+        {
+          "name": "pool_state_7",
+          "writable": true
+        },
+        {
+          "name": "pool_state_8",
+          "writable": true
+        },
+        {
+          "name": "pool_state_9",
+          "writable": true
+        },
+        {
+          "name": "pool_state_10",
+          "writable": true
+        },
+        {
+          "name": "pool_state_11",
+          "writable": true
+        },
+        {
+          "name": "pool_state_12",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_1",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_2",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_3",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_4",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_5",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_6",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_7",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_8",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_9",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_10",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_11",
+          "writable": true
+        },
+        {
+          "name": "output_token_account_12",
+          "writable": true
+        },
+        {
+          "name": "input_vault_1",
+          "writable": true
+        },
+        {
+          "name": "input_vault_2",
+          "writable": true
+        },
+        {
+          "name": "input_vault_3",
+          "writable": true
+        },
+        {
+          "name": "input_vault_4",
+          "writable": true
+        },
+        {
+          "name": "input_vault_5",
+          "writable": true
+        },
+        {
+          "name": "input_vault_6",
+          "writable": true
+        },
+        {
+          "name": "input_vault_7",
+          "writable": true
+        },
+        {
+          "name": "input_vault_8",
+          "writable": true
+        },
+        {
+          "name": "input_vault_9",
+          "writable": true
+        },
+        {
+          "name": "input_vault_10",
+          "writable": true
+        },
+        {
+          "name": "input_vault_11",
+          "writable": true
+        },
+        {
+          "name": "input_vault_12",
+          "writable": true
+        },
+        {
+          "name": "output_vault_1",
+          "writable": true
+        },
+        {
+          "name": "output_vault_2",
+          "writable": true
+        },
+        {
+          "name": "output_vault_3",
+          "writable": true
+        },
+        {
+          "name": "output_vault_4",
+          "writable": true
+        },
+        {
+          "name": "output_vault_5",
+          "writable": true
+        },
+        {
+          "name": "output_vault_6",
+          "writable": true
+        },
+        {
+          "name": "output_vault_7",
+          "writable": true
+        },
+        {
+          "name": "output_vault_8",
+          "writable": true
+        },
+        {
+          "name": "output_vault_9",
+          "writable": true
+        },
+        {
+          "name": "output_vault_10",
+          "writable": true
+        },
+        {
+          "name": "output_vault_11",
+          "writable": true
+        },
+        {
+          "name": "output_vault_12",
+          "writable": true
+        },
+        {
+          "name": "output_token_mint_1"
+        },
+        {
+          "name": "output_token_mint_2"
+        },
+        {
+          "name": "output_token_mint_3"
+        },
+        {
+          "name": "output_token_mint_4"
+        },
+        {
+          "name": "output_token_mint_5"
+        },
+        {
+          "name": "output_token_mint_6"
+        },
+        {
+          "name": "output_token_mint_7"
+        },
+        {
+          "name": "output_token_mint_8"
+        },
+        {
+          "name": "output_token_mint_9"
+        },
+        {
+          "name": "output_token_mint_10"
+        },
+        {
+          "name": "output_token_mint_11"
+        },
+        {
+          "name": "output_token_mint_12"
+        },
+        {
+          "name": "observation_state_1",
+          "writable": true
+        },
+        {
+          "name": "observation_state_2",
+          "writable": true
+        },
+        {
+          "name": "observation_state_3",
+          "writable": true
+        },
+        {
+          "name": "observation_state_4",
+          "writable": true
+        },
+        {
+          "name": "observation_state_5",
+          "writable": true
+        },
+        {
+          "name": "observation_state_6",
+          "writable": true
+        },
+        {
+          "name": "observation_state_7",
+          "writable": true
+        },
+        {
+          "name": "observation_state_8",
+          "writable": true
+        },
+        {
+          "name": "observation_state_9",
+          "writable": true
+        },
+        {
+          "name": "observation_state_10",
+          "writable": true
+        },
+        {
+          "name": "observation_state_11",
+          "writable": true
+        },
+        {
+          "name": "observation_state_12",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "amount_in",
+          "type": "u64"
+        },
+        {
+          "name": "minimum_amount_out",
+          "type": "u64"
+        },
+        {
+          "name": "token_length",
+          "type": "u8"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "AmmConfig",
+      "discriminator": [
+        218,
+        244,
+        33,
+        104,
+        203,
+        203,
+        43,
+        111
+      ]
+    },
+    {
+      "name": "ObservationState",
+      "discriminator": [
+        122,
+        174,
+        197,
+        53,
+        129,
+        9,
+        165,
+        132
+      ]
+    },
+    {
+      "name": "PoolState",
+      "discriminator": [
+        247,
+        237,
+        227,
+        245,
+        215,
+        195,
+        222,
+        70
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidTokenLength",
+      "msg": "token_length must be between 1 and 12"
+    }
+  ],
+  "types": [
+    {
+      "name": "AmmConfig",
+      "docs": [
+        "Holds the current owner of the factory"
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "bump",
+            "docs": [
+              "Bump to identify PDA"
+            ],
+            "type": "u8"
+          },
+          {
+            "name": "disable_create_pool",
+            "docs": [
+              "Status to control if new pool can be create"
+            ],
+            "type": "bool"
+          },
+          {
+            "name": "index",
+            "docs": [
+              "Config index"
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "trade_fee_rate",
+            "docs": [
+              "The trade fee, denominated in hundredths of a bip (10^-6)"
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "protocol_fee_rate",
+            "docs": [
+              "The protocol fee"
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "fund_fee_rate",
+            "docs": [
+              "The fund fee, denominated in hundredths of a bip (10^-6)"
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "create_pool_fee",
+            "docs": [
+              "Fee for create a new pool"
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "protocol_owner",
+            "docs": [
+              "Address of the protocol fee owner"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "fund_owner",
+            "docs": [
+              "Address of the fund fee owner"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "padding",
+            "docs": [
+              "padding"
+            ],
+            "type": {
+              "array": [
+                "u64",
+                16
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Observation",
+      "docs": [
+        "The element of observations in ObservationState"
+      ],
+      "serialization": "bytemuckunsafe",
+      "repr": {
+        "kind": "c",
+        "packed": true
+      },
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "block_timestamp",
+            "docs": [
+              "The block timestamp of the observation"
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "cumulative_token_0_price_x32",
+            "docs": [
+              "the cumulative of token0 price during the duration time, Q32.32, the remaining 64 bit for overflow"
+            ],
+            "type": "u128"
+          },
+          {
+            "name": "cumulative_token_1_price_x32",
+            "docs": [
+              "the cumulative of token1 price during the duration time, Q32.32, the remaining 64 bit for overflow"
+            ],
+            "type": "u128"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ObservationState",
+      "serialization": "bytemuckunsafe",
+      "repr": {
+        "kind": "c",
+        "packed": true
+      },
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "initialized",
+            "docs": [
+              "Whether the ObservationState is initialized"
+            ],
+            "type": "bool"
+          },
+          {
+            "name": "observation_index",
+            "docs": [
+              "the most-recently updated index of the observations array"
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "pool_id",
+            "type": "pubkey"
+          },
+          {
+            "name": "observations",
+            "docs": [
+              "observation array"
+            ],
+            "type": {
+              "array": [
+                {
+                  "defined": {
+                    "name": "Observation"
+                  }
+                },
+                100
+              ]
+            }
+          },
+          {
+            "name": "padding",
+            "docs": [
+              "padding for feature update"
+            ],
+            "type": {
+              "array": [
+                "u64",
+                4
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "PoolState",
+      "serialization": "bytemuckunsafe",
+      "repr": {
+        "kind": "c",
+        "packed": true
+      },
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "amm_config",
+            "docs": [
+              "Which config the pool belongs"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "pool_creator",
+            "docs": [
+              "pool creator"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "token_0_vault",
+            "docs": [
+              "Token A"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "token_1_vault",
+            "docs": [
+              "Token B"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "lp_mint",
+            "docs": [
+              "Pool tokens are issued when A or B tokens are deposited.",
+              "Pool tokens can be withdrawn back to the original A or B token."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "token_0_mint",
+            "docs": [
+              "Mint information for token A"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "token_1_mint",
+            "docs": [
+              "Mint information for token B"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "token_0_program",
+            "docs": [
+              "token_0 program"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "token_1_program",
+            "docs": [
+              "token_1 program"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "observation_key",
+            "docs": [
+              "observation account to store oracle data"
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "auth_bump",
+            "type": "u8"
+          },
+          {
+            "name": "status",
+            "docs": [
+              "Bitwise representation of the state of the pool",
+              "bit0, 1: disable deposit(value is 1), 0: normal",
+              "bit1, 1: disable withdraw(value is 2), 0: normal",
+              "bit2, 1: disable swap(value is 4), 0: normal"
+            ],
+            "type": "u8"
+          },
+          {
+            "name": "lp_mint_decimals",
+            "type": "u8"
+          },
+          {
+            "name": "mint_0_decimals",
+            "docs": [
+              "mint0 and mint1 decimals"
+            ],
+            "type": "u8"
+          },
+          {
+            "name": "mint_1_decimals",
+            "type": "u8"
+          },
+          {
+            "name": "lp_supply",
+            "docs": [
+              "True circulating supply without burns and lock ups"
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "protocol_fees_token_0",
+            "docs": [
+              "The amounts of token_0 and token_1 that are owed to the liquidity provider."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "protocol_fees_token_1",
+            "type": "u64"
+          },
+          {
+            "name": "fund_fees_token_0",
+            "type": "u64"
+          },
+          {
+            "name": "fund_fees_token_1",
+            "type": "u64"
+          },
+          {
+            "name": "open_time",
+            "docs": [
+              "The timestamp allowed for swap in the pool."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "recent_epoch",
+            "docs": [
+              "recent epoch"
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "padding",
+            "docs": [
+              "padding for future updates"
+            ],
+            "type": {
+              "array": [
+                "u64",
+                31
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "constants": [
+    {
+      "name": "FEE_WALLET1",
+      "type": "string",
+      "value": "\"8Pu6QNnD8UnqXcaz3dYeXfNXfmaWoK6zbJZeUeaW1eAP\""
+    }
+  ]
+}

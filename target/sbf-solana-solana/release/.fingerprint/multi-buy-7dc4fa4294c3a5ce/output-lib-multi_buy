@@ -1,0 +1,2 @@
+Error: Function _ZN143_$LT$multi_buy..instructions..multi_buy..MultiBuy$u20$as$u20$anchor_lang..Accounts$LT$multi_buy..instructions..multi_buy..MultiBuyBumps$GT$$GT$12try_accounts17h7cb54a6c747fa0d0E Stack offset of 4104 exceeded max offset of 4096 by 8 bytes, please minimize large stack variables. Estimated function frame size: 4448 bytes. Exceeding the maximum stack offset may cause undefined behavior during execution.
+

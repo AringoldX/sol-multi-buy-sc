@@ -1,0 +1,11 @@
+/home/yasmine/Projects/working/target/debug/deps/solana_borsh-faf2959563d0c09a.d: /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/lib.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/deprecated.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/macros.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/v0_10.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/v1.rs
+
+/home/yasmine/Projects/working/target/debug/deps/libsolana_borsh-faf2959563d0c09a.rlib: /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/lib.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/deprecated.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/macros.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/v0_10.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/v1.rs
+
+/home/yasmine/Projects/working/target/debug/deps/libsolana_borsh-faf2959563d0c09a.rmeta: /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/lib.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/deprecated.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/macros.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/v0_10.rs /home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/v1.rs
+
+/home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/lib.rs:
+/home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/deprecated.rs:
+/home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/macros.rs:
+/home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/v0_10.rs:
+/home/yasmine/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-borsh-2.2.1/src/v1.rs:
