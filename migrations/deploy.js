@@ -13,7 +13,7 @@ const {
 } = require('@solana/web3.js')
 const { TOKEN_PROGRAM_ID, NATIVE_MINT } = require('@solana/spl-token')
 
-const programId = 'CprucEGtqY3ntLcT31ag1RmhRQZ1AU4jMf4DMuYcimdH'
+const programId = '3b9MSTDA79bPXqEP8TXiFXkaN3ZtKii1iAsmrjfvhycJ'
 const confirmOptions = {
   skipPreflight: false,
 }
@@ -65,7 +65,7 @@ const cpSwapProgram = 'CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C'
 const configAddress = 'D4FPEruKEHrG5TenZ2mpDGEfu1iUvTiqBxvpU8HLBvC2'
 const feeWallet1 = '8Pu6QNnD8UnqXcaz3dYeXfNXfmaWoK6zbJZeUeaW1eAP'
 const feeWallet2 = 'Cc4EeRYxVJrNkwsh599K2RJ1FUo8hwNUHmjtm25NHB5R'
-const feeWallet3 = 'tgSKNq3Nc5k21dcVzWS3932A2jS65HxUobhLBdZT2XW'
+const feeWallet3 = 'B6umX6TaYuCGP3iZBFSgwPzLWaGNetCQF4wtSTUYXM8E'
 
 const mints = [
   'C49Ut3om3QFTDrMZ5Cr8VcTKPpHDcQ2Fv8mmuJHHigDt', // AQUARIUS
@@ -162,6 +162,8 @@ const addresses = [
 module.exports = async function (provider) {
   // Configure client to use the provider.
   anchor.setProvider(provider)
+
+  provider.connection._commitment = 'finalized'
 
   const owner = anchor.Wallet.local().payer
   console.log(owner.publicKey.toString())

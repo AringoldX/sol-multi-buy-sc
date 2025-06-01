@@ -17,5 +17,5 @@ export const feeWallet2 = new PublicKey(
   'Cc4EeRYxVJrNkwsh599K2RJ1FUo8hwNUHmjtm25NHB5R'
 )
 export const feeWallet3 = new PublicKey(
-  'tgSKNq3Nc5k21dcVzWS3932A2jS65HxUobhLBdZT2XW'
+  'B6umX6TaYuCGP3iZBFSgwPzLWaGNetCQF4wtSTUYXM8E'
 )

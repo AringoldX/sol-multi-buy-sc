@@ -5,13 +5,13 @@ seeds = false
 skip-lint = false
 
 [programs.localnet]
-multi_buy = "CprucEGtqY3ntLcT31ag1RmhRQZ1AU4jMf4DMuYcimdH"
+multi_buy = "3b9MSTDA79bPXqEP8TXiFXkaN3ZtKii1iAsmrjfvhycJ"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "mainnet"
+cluster = "https://mainnet.helius-rpc.com/?api-key=ba79f9c7-5c1b-41c6-81dd-234e9fc53df7"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
@@ -23,7 +23,8 @@ shutdown_wait = 2000
 upgradeable = true
 
 [test.validator]
-url = "https://api.mainnet-beta.solana.com"
+url = "https://mainnet.helius-rpc.com/?api-key=ba79f9c7-5c1b-41c6-81dd-234e9fc53df7"
+# url = "https://devnet.helius-rpc.com/?api-key=ba79f9c7-5c1b-41c6-81dd-234e9fc53df7"
 # url = "https://rpc.asdf1234.win"
 
 # cp-swap program in mainnet

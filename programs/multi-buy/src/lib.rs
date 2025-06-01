@@ -6,7 +6,7 @@ use anchor_lang::prelude::*;
 pub use constants::*;
 use instructions::*;
 
-declare_id!("CprucEGtqY3ntLcT31ag1RmhRQZ1AU4jMf4DMuYcimdH");
+declare_id!("3b9MSTDA79bPXqEP8TXiFXkaN3ZtKii1iAsmrjfvhycJ");
 
 #[program]
 pub mod multi_buy {

@@ -14,6 +14,7 @@ use crate::{FEE_WALLET1, FEE_WALLET2, FEE_WALLET3};
 #[derive(Accounts)]
 pub struct MultiBuy<'info> {
     pub cp_swap_program: Program<'info, RaydiumCpSwap>,
+    /// The user performing the swap
     pub payer: Signer<'info>,
 
     /// CHECK: the fee wallet 1 hardcoded
@@ -50,12 +51,6 @@ pub struct MultiBuy<'info> {
     #[account(address = pool_state_1.load()?.amm_config)]
     pub amm_config: Box<Account<'info, AmmConfig>>,
 
-    #[account(mut)]
-    pub wsol_account: Box<InterfaceAccount<'info, TokenAccount>>,
-    pub token_program: Interface<'info, TokenInterface>,
-    pub wsol_mint: Box<InterfaceAccount<'info, Mint>>,
-    pub system_program: Program<'info, System>,
-
     // Per-token accounts (repeat for 12)
     #[account(mut)]
     pub pool_state_1: AccountLoader<'info, PoolState>,
@@ -81,6 +76,9 @@ pub struct MultiBuy<'info> {
     pub pool_state_11: AccountLoader<'info, PoolState>,
     #[account(mut)]
     pub pool_state_12: AccountLoader<'info, PoolState>,
+
+    #[account(mut)]
+    pub wsol_account: Box<InterfaceAccount<'info, TokenAccount>>,
 
     #[account(mut)]
     pub output_token_account_1: Box<InterfaceAccount<'info, TokenAccount>>,
@@ -140,34 +138,55 @@ pub struct MultiBuy<'info> {
     pub output_vault_3: Box<InterfaceAccount<'info, TokenAccount>>,
     #[account(mut)]
     pub output_vault_4: Box<InterfaceAccount<'info, TokenAccount>>,
-    #[account(mut)]
+    #[account()]
     pub output_vault_5: Box<InterfaceAccount<'info, TokenAccount>>,
-    #[account(mut)]
+    #[account()]
     pub output_vault_6: Box<InterfaceAccount<'info, TokenAccount>>,
-    #[account(mut)]
+    #[account()]
     pub output_vault_7: Box<InterfaceAccount<'info, TokenAccount>>,
-    #[account(mut)]
+    #[account()]
     pub output_vault_8: Box<InterfaceAccount<'info, TokenAccount>>,
-    #[account(mut)]
+    #[account()]
     pub output_vault_9: Box<InterfaceAccount<'info, TokenAccount>>,
-    #[account(mut)]
+    #[account()]
     pub output_vault_10: Box<InterfaceAccount<'info, TokenAccount>>,
-    #[account(mut)]
+    #[account()]
     pub output_vault_11: Box<InterfaceAccount<'info, TokenAccount>>,
-    #[account(mut)]
+    #[account()]
     pub output_vault_12: Box<InterfaceAccount<'info, TokenAccount>>,
 
+    /// SPL program for input/output token transfers
+    pub token_program: Interface<'info, TokenInterface>,
+
+    /// The mint of input token WSOL
+    #[account(
+        address = input_vault_1.mint
+    )]
+    pub wsol_mint: Box<InterfaceAccount<'info, Mint>>,
+
+    #[account()]
     pub output_token_mint_1: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_2: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_3: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_4: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_5: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_6: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_7: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_8: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_9: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_10: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_11: Box<InterfaceAccount<'info, Mint>>,
+    #[account()]
     pub output_token_mint_12: Box<InterfaceAccount<'info, Mint>>,
 
     #[account(mut)]
@@ -178,22 +197,24 @@ pub struct MultiBuy<'info> {
     pub observation_state_3: AccountLoader<'info, ObservationState>,
     #[account(mut)]
     pub observation_state_4: AccountLoader<'info, ObservationState>,
-    #[account(mut)]
+    #[account()]
     pub observation_state_5: AccountLoader<'info, ObservationState>,
-    #[account(mut)]
+    #[account()]
     pub observation_state_6: AccountLoader<'info, ObservationState>,
-    #[account(mut)]
+    #[account()]
     pub observation_state_7: AccountLoader<'info, ObservationState>,
-    #[account(mut)]
+    #[account()]
     pub observation_state_8: AccountLoader<'info, ObservationState>,
-    #[account(mut)]
+    #[account()]
     pub observation_state_9: AccountLoader<'info, ObservationState>,
-    #[account(mut)]
+    #[account()]
     pub observation_state_10: AccountLoader<'info, ObservationState>,
-    #[account(mut)]
+    #[account()]
     pub observation_state_11: AccountLoader<'info, ObservationState>,
-    #[account(mut)]
+    #[account()]
     pub observation_state_12: AccountLoader<'info, ObservationState>,
+
+    pub system_program: Program<'info, System>,
 }
 
 #[error_code]
